@@ -2,7 +2,7 @@ import './App.css'
 import {Box, createTheme, ThemeProvider} from "@mui/material";
 import {MainLeft} from "./components/MainLeft.tsx";
 import {MainRight} from "./components/MainRight.tsx";
-import {Route, Routes} from "react-router-dom";
+import {useState} from "react";
 
 function App() {
 
@@ -15,21 +15,19 @@ function App() {
         },
     });
 
+    const [isAboutVisible, setAboutVisisble] = useState(false)
+    const [isExpVisible, setExpVisisble] = useState(false)
+    const [isProjectsVisible, setProjectsVisisble] = useState(false)
+
+    // todo: [ ] useSignal
+
     return (
-
-        <Routes>
-            <Route path="*"
-                   element={
-                       <ThemeProvider theme={theme}>
-                           <Box sx={{display: 'flex', justifyContent: 'space-between', marginTop: 6, marginX: 6}}>
-                               <MainLeft/>
-                               <MainRight/>
-                           </Box>
-                       </ThemeProvider>
-                   }
-            />
-        </Routes>
-
+        <ThemeProvider theme={theme}>
+            <Box sx={{display: 'flex', justifyContent: 'space-between'}}>
+                <MainLeft isAboutVisible={isAboutVisible} isExperienceVisible={isExpVisible} isProjectsVisible={isProjectsVisible}/>
+                <MainRight setIsAboutVisible={setAboutVisisble} setIsExpVisible={setExpVisisble} setIsProjectsVisible={setProjectsVisisble}/>
+            </Box>
+        </ThemeProvider>
     )
 }
 
