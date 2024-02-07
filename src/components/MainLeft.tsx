@@ -36,7 +36,9 @@ export function MainLeft(props: MainLeftProps): React.ReactElement {
     return (
         <>
             <main>
-                <Box sx={{display: 'flex', flexDirection: 'column'}}>
+                <Box
+                    sx={{display: 'flex', flexDirection: 'column', marginY: '5vh', marginX: '4vw'}}
+                >
                     <Typography fontWeight='bold' fontSize={52}>Brad Jordan</Typography>
                     <Typography sx={{marginTop: -1}} fontSize={24}>Full stack developer</Typography>
                     <Typography sx={{marginTop: 2}} fontSize={16} color='#8599bc'>
