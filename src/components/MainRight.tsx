@@ -32,22 +32,20 @@ export function MainRight(props: MainRightProps): React.ReactElement {
     ), [projectsRef])
 
 
-
     useEffect(() => {
-        aboutObserver.observe(aboutRef.current)
+        aboutObserver.observe(aboutRef.current || new Element())
         return () => aboutObserver.disconnect()
     }, [])
 
     useEffect(() => {
-        expObserver.observe(expereinceRef.current)
+        expObserver.observe(expereinceRef.current || new Element())
         return () => expObserver.disconnect()
     }, [])
 
     useEffect(() => {
-        projectsObserver.observe(projectsRef.current)
+        projectsObserver.observe(projectsRef.current || new Element())
         return () => projectsObserver.disconnect()
     }, [])
-
 
 
     return (
@@ -82,7 +80,9 @@ export function MainRight(props: MainRightProps): React.ReactElement {
                 <Typography fontSize={18} color='#8599bc'>
                     The friends I made there worked together through a number of other startups, building solutions
                     that scale and applications for a number of B2B spaces. My experience
-                    generally trended towards the backend Java ecosystem leveraging <Typography color="#ffffff" fontSize={18} variant="caption">AWS </Typography>
+                    generally trended towards the backend Java ecosystem leveraging <Typography color="#ffffff"
+                                                                                                fontSize={18}
+                                                                                                variant="caption">AWS </Typography>
                     and <Typography color="#ffffff" fontSize={18} variant="caption">GCP </Typography>
                     as platforms. Most recently, I have transitioned into a role of pure Frontend work using TypeScript
                     and React. The creativity of building intuitive and elegant UIs has been a welcome change.
