@@ -14,7 +14,7 @@ const HoverIcon = ({children}: { children: React.ReactElement }): React.ReactEle
 export function FooterLinks(): React.ReactElement {
     return (
         <footer id='footer'>
-            <Box sx={{position: 'relative', top: '10vh', gap: 4}}>
+            <Box>
                 <a href='https://www.linkedin.com/in/boulderbrad/' target="_blank"><HoverIcon><FaLinkedin/></HoverIcon></a>
                 <a href='https://github.com/climberbrad' target='_blank'><HoverIcon><FaGithub/></HoverIcon></a>
                 <a href='https://medium.com/@climberbrad' target='_blank'><HoverIcon><FaMedium/></HoverIcon></a>

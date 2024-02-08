@@ -1,5 +1,5 @@
 import './App.css'
-import {Box, createTheme, ThemeProvider} from "@mui/material";
+import {createTheme, Grid, ThemeProvider} from "@mui/material";
 import {MainLeft} from "./components/MainLeft.tsx";
 import {MainRight} from "./components/MainRight.tsx";
 import {useState} from "react";
@@ -23,10 +23,20 @@ function App() {
 
     return (
         <ThemeProvider theme={theme}>
-            <Box sx={{display: 'flex', justifyContent: 'space-between'}}>
-                <MainLeft isAboutVisible={isAboutVisible} isExperienceVisible={isExpVisible} isProjectsVisible={isProjectsVisible}/>
-                <MainRight setIsAboutVisible={setAboutVisisble} setIsExpVisible={setExpVisisble} setIsProjectsVisible={setProjectsVisisble}/>
-            </Box>
+            <Grid sx={{paddingX: 8}} container columnSpacing={{ xs: 1, sm: 2, md: 2 }}>
+                <Grid item xs={12} md={5}>
+                    <MainLeft
+                        isAboutVisible={isAboutVisible}
+                        isExperienceVisible={isExpVisible}
+                        isProjectsVisible={isProjectsVisible}/>
+                </Grid>
+                <Grid item xs={12} md={7}>
+                    <MainRight
+                        setIsAboutVisible={setAboutVisisble}
+                        setIsExpVisible={setExpVisisble}
+                        setIsProjectsVisible={setProjectsVisisble}/>
+                </Grid>
+            </Grid>
         </ThemeProvider>
     )
 }
