@@ -23,7 +23,7 @@ function App() {
 
     return (
         <ThemeProvider theme={theme}>
-            <Grid sx={{paddingX: 8}} container columnSpacing={{ xs: 1, sm: 2, md: 2 }}>
+            <Grid paddingX={{xs: 0, md: 8}} container columnSpacing={{ xs: 1, sm: 2, md: 2 }}>
                 <Grid item xs={12} md={5}>
                     <MainLeft
                         isAboutVisible={isAboutVisible}
