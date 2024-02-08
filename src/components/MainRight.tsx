@@ -96,7 +96,7 @@ export function MainRight(props: MainRightProps): React.ReactElement {
                 </Box>
             </Grid>
 
-            <Divider sx={{marginY: 6}}/>
+            <Divider sx={{marginY: 2}}/>
 
             <Grid item xs={12}>
                 <Box id='experience' ref={expereinceRef}>

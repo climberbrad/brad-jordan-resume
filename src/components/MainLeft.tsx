@@ -46,12 +46,12 @@ export function MainLeft(props: MainLeftProps): React.ReactElement {
                 <Grid item display={{xs: "none", md: "block"}} md={12}>
                     <Box sx={{marginTop: '15vh', display: 'flex', flexDirection: 'column', gap: 2}}>
                         <NavItem link='about' txt='about'
-                                 isSelected={props.isAboutVisible && !props.isExperienceVisible}/>
+                                 isSelected={props.isAboutVisible}/>
                         <NavItem link='experience' txt='experience'
                                  isSelected={props.isExperienceVisible
-                                     && (!props.isAboutVisible || !props.isProjectsVisible)}/>
+                                     && (!props.isAboutVisible && !props.isProjectsVisible)}/>
                         <NavItem link='projects' txt='projects'
-                                 isSelected={props.isProjectsVisible && !props.isExperienceVisible}/>
+                                 isSelected={props.isProjectsVisible}/>
                     </Box>
                 </Grid>
                 <Grid item md={12} display={{marginTop: '10vh'}}>

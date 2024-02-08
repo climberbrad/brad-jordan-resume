@@ -1,5 +1,6 @@
 import {Button, Card, CardActions, CardContent, CardMedia, Typography} from "@mui/material";
 import {Project} from "./ProjectData.ts";
+import {Link} from "react-router-dom";
 
 export function ProjectCard(project: Project) : React.ReactElement {
     return (
@@ -15,13 +16,11 @@ export function ProjectCard(project: Project) : React.ReactElement {
                     {project.name}
                 </Typography>
                 <Typography variant="body2" color="white">
-                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                    species, ranging across all continents except Antarctica
+                    {project.description}
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+                <Button size="small" component={Link} to={project.link} target='_blank'>Visit</Button>
             </CardActions>
         </Card>
     )
