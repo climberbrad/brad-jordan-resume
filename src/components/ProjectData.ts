@@ -9,7 +9,7 @@ export const ProjectData: Project[] = [
     {
         name: 'reserve-me',
         link: 'https://reserve-me-de1g.vercel.app/',
-        image: './src/assets/reserve-me.png',
+        image: 'reserve-me.png',
         description: 'An Airbnb type reservation system built using MUI'
     },
 ]
