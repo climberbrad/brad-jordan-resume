@@ -2,12 +2,15 @@ import {Button, Card, CardActions, CardContent, CardMedia, Typography} from "@mu
 import {Project} from "./ProjectData.ts";
 import {Link} from "react-router-dom";
 
-export function ProjectCard(project: Project) : React.ReactElement {
+export function ProjectCard(project: Project): React.ReactElement {
     return (
-        // <Card sx={{ marginY: 4, background: '#0f172a', '&:hover': {background: "#112538", border: 0, borderRadius: 2}}}>
-        <Card sx={{ marginY: 4, background: '#0f172a', '&:hover': {background: "#112538", border: 0, borderRadius: 2}}}>
+        <Card sx={{
+            marginY: 4,
+            background: '#0f172a',
+            '&:hover': {background: "#112538", border: 0, borderRadius: 2}
+        }}>
             <CardMedia
-                sx={{ height: 140 }}
+                sx={{height: 140}}
                 image={project.image}
                 title={project.name}
             />
@@ -20,7 +23,8 @@ export function ProjectCard(project: Project) : React.ReactElement {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small" component={Link} to={project.link} target='_blank'>Visit</Button>
+                <Button size="small" component={Link} to={project.link} target='_blank'>WebSite</Button>
+                <Button size="small" component={Link} to={project.codeUrl} target='_blank'>Code</Button>
             </CardActions>
         </Card>
     )
