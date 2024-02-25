@@ -24,5 +24,15 @@ export const ProjectData: Project[] = [
         description: 'I created a webapp to allow users to create seven day polls. ' +
             'It is just a fun little app so my kids could create a poll to ask what movie they wanted to watch Friday nights. ' +
             'The backend API is Node | Express | MongoDB (MERN stack) and the Frontend is React/TypeScript and MUI.'
+    },
+    {
+        name: 'Building Elevator',
+        link: 'https://building-elevator.vercel.app/',
+        codeUrl: 'https://github.com/climberbrad/building-elevator',
+        image: 'elevator.png',
+        description: 'This was a fun little web app I created to play with the React useReducer() hook. ' +
+            'The hook allows you to create a state machine which works well for projects where state ' +
+            'is complicated to manage. An elevator has many states like which floor is next, which direction it is ' +
+            'going and which floor it is currently on.'
     }
 ]

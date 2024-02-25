@@ -10,7 +10,8 @@ export function ProjectCard(project: Project): React.ReactElement {
             '&:hover': {background: "#112538", border: 0, borderRadius: 2}
         }}>
             <CardMedia
-                sx={{height: 140}}
+                sx={{ padding: "1em 1em 0 1em", objectFit: "contain", height: 140 }}
+                // height={140}
                 image={project.image}
                 title={project.name}
             />
